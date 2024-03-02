@@ -27,9 +27,17 @@ export default function App() {
 
   return (
     <NavigationContainer>
+      <StatusBar
+        style="fade"
+        backgroundColor="#fff"
+        barStyle="dark-content"
+        hidden={true}
+      />
       <Stack.Navigator
         initialRouteName="Welcome"
-        screenOptions={{ headerShown: true }}
+        screenOptions={{
+          headerShown: false,
+        }}
       >
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Welcome" component={Welcome} />
